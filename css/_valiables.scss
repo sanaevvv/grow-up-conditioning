@@ -1,0 +1,28 @@
+//カラー指定
+$main-color: #dae5e4;
+$sub-color: #244442;
+$accent-color: #53a022;
+
+// メディアクエリ
+$breakPoints: (
+  'pc': '1280px',
+  'sp-wide': '812px',
+  'tablet': '768px',
+  'sp': '480px',
+) !default;
+
+// フォントサイズ
+$font-s: 1.4rem;
+$font-m: 1.8rem;
+$font-l: 2.0rem;
+
+// 「 」 ボーダー
+$bar-style: solid;
+$bar-size: 3px;
+$bar-color: $sub-color;
+
+// ヘッダー高さ
+$header-height: 6vh;
+
+// ファーストビュー高さ
+$fv-height: 100vh - $header-height;

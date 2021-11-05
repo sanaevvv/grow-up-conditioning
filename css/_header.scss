@@ -1,0 +1,5 @@
+@import 'mixins';
+@import 'valiables';
+
+@include fixed; /* ロゴとナビ */
+@include flex; /* ナビリスト */
