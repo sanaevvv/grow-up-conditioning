@@ -1,42 +1,4 @@
 @charset "UTF-8";
-.bottom_border {
-  text-align: center;
-  position: relative;
-  margin-bottom: 1em;
-}
-
-.bottom_border:before {
-  content: ' ';
-  position: absolute;
-  left: 50%;
-  bottom: -15%;
-  width: 30px;
-  height: 2px;
-  -webkit-transform: translateX(-50%);
-          transform: translateX(-50%);
-  background-color: #000;
-  border-radius: 1px;
-}
-
-.bottom_border {
-  text-align: center;
-  position: relative;
-  margin-bottom: 1em;
-}
-
-.bottom_border:before {
-  content: ' ';
-  position: absolute;
-  left: 50%;
-  bottom: -15%;
-  width: 30px;
-  height: 2px;
-  -webkit-transform: translateX(-50%);
-          transform: translateX(-50%);
-  background-color: #000;
-  border-radius: 1px;
-}
-
 .header {
   background-color: #EDE4D3;
   position: fixed;
@@ -76,25 +38,6 @@
 }
 
 /* ナビリスト */
-.bottom_border {
-  text-align: center;
-  position: relative;
-  margin-bottom: 1em;
-}
-
-.bottom_border:before {
-  content: ' ';
-  position: absolute;
-  left: 50%;
-  bottom: -15%;
-  width: 30px;
-  height: 2px;
-  -webkit-transform: translateX(-50%);
-          transform: translateX(-50%);
-  background-color: #000;
-  border-radius: 1px;
-}
-
 .arrow-down {
   width: 0;
   height: 0;
@@ -354,34 +297,6 @@
      object-fit: contain;
 }
 
-.shapedividers_com-7546 {
-  overflow: hidden;
-  position: relative;
-  padding-top: 90px;
-}
-
-.shapedividers_com-7546::before {
-  content: '';
-  font-family: 'shape divider from ShapeDividers.com';
-  position: absolute;
-  z-index: 3;
-  pointer-events: none;
-  background-repeat: no-repeat;
-  bottom: -0.1vw;
-  left: -0.1vw;
-  right: -0.1vw;
-  top: -0.1vw;
-  background-size: 100% 90px;
-  background-position: 50% 0%;
-  background-image: url('data:image/svg+xml;charset=utf8, <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 8 1" preserveAspectRatio="none"><path d="M0 0l10 0l-10 1" fill="%23dae5e4"/></svg>');
-}
-
-@media (min-width: 2100px) {
-  .shapedividers_com-7546::before {
-    background-size: 100% calc(2vw + 90px);
-  }
-}
-
 .trial-ttl {
   font-weight: bold;
   text-align: center;
@@ -464,7 +379,7 @@
   border: 3px solid #a2b589;
   font-size: 20px;
   background: #a2b589;
-  padding: 40px;
+  padding: 40px 20px;
   font-weight: bold;
   font-size: 40px;
   background-color: #ccdfc8b3;
@@ -696,11 +611,11 @@ div[class^='times']:after {
 
 .board-text {
   position: absolute;
-  top: 43%;
+  top: 40%;
   left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
-  width: 300px;
+  -webkit-transform: translate(-45%, -50%);
+          transform: translate(-45%, -50%);
+  width: 330px;
   color: #fff;
   font-family: uddigikyokasho-pro, sans-serif;
   font-weight: 400;
@@ -709,7 +624,9 @@ div[class^='times']:after {
 
 @media screen and (max-width: 768px) {
   .board-text {
-    font-size: 95%;
+    font-size: 90%;
+    left: 53%;
+    top: 37%;
   }
 }
 
@@ -791,6 +708,20 @@ div[class^='times']:after {
           box-shadow: 0 1px 5px #244442;
 }
 
+@media screen and (max-width: 480px) {
+  .trial-link-button, .tel {
+    font-size: 105%;
+    padding: 20px 11vw;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .trial-link-button, .tel {
+    font-size: 110%;
+    padding: 20px 9.5vw;
+  }
+}
+
 .address {
   padding: 2px 5px;
   background-color: #53a022;
@@ -836,6 +767,7 @@ div[class^='times']:after {
           transform: translate(-50%, -50%);
   color: #fff;
   text-shadow: 0 0 5px black;
+  width: 100%;
 }
 
 .blog-desc {
@@ -1175,6 +1107,12 @@ div[class^='times']:after {
   padding-left: 20px;
 }
 
+@media screen and (max-width: 768px) {
+  .font150 {
+    font-size: 130%;
+  }
+}
+
 .first-view-wrapper {
   background-color: silver;
   padding: 80px 0 30px;
@@ -1230,33 +1168,14 @@ iframe {
   }
 }
 
-.mb-20 {
+.mb-s {
   margin-bottom: 12px;
 }
 
 @media screen and (max-width: 768px) {
-  .mb-20 {
+  .mb-s {
     margin-bottom: 8px;
   }
-}
-
-.bottom_border {
-  text-align: center;
-  position: relative;
-  margin-bottom: 1em;
-}
-
-.bottom_border:before {
-  content: ' ';
-  position: absolute;
-  left: 50%;
-  bottom: -15%;
-  width: 30px;
-  height: 2px;
-  -webkit-transform: translateX(-50%);
-          transform: translateX(-50%);
-  background-color: #000;
-  border-radius: 1px;
 }
 
 html {
@@ -1336,24 +1255,12 @@ section {
   padding: 50px 10px;
 }
 
-.py-10 {
-  padding: 10px 0;
-}
-
-.py-20 {
-  padding: 20px 0;
-}
-
 .py-30 {
   padding: 20px 0;
 }
 
 .pt-10 {
   padding-top: 10px;
-}
-
-.fw-bold {
-  font-weight: bold;
 }
 
 .text-center {

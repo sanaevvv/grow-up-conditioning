@@ -2,7 +2,6 @@
 @import 'mixins';
 @import 'header';
 @import 'main';
-@import 'footer';
 
 html {
   box-sizing: border-box;
@@ -69,12 +68,7 @@ section {
   text-align: center;
   padding: 50px 10px;
 }
-.py-10 {
-  padding: 10px 0;
-}
-.py-20 {
-  padding: 20px 0;
-}
+
 .py-30 {
   padding: 20px 0;
 }
@@ -82,9 +76,6 @@ section {
   padding-top: 10px;
 }
 
-.fw-bold {
-  font-weight: bold;
-}
 .text-center {
   text-align: center;
 }
