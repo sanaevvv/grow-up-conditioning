@@ -16,6 +16,10 @@
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 10px;
+    @include mq(tablet) {
+      grid-template-columns: 1fr;
+      gap: 30px;
+    }
     .goal-grid-list {
       padding: 10px;
       background: #fff;
@@ -50,6 +54,9 @@
   height: 780px;
   background-size: contain;
   background-repeat: no-repeat;
+  @include mq(tablet) {
+    height: 1300px;
+  }
 }
 @include mask(#14a1198c, 1);
 .mask-txt {
@@ -95,6 +102,9 @@
   background-size: cover;
   background-repeat: no-repeat;
   position: relative;
+  @include mq(tablet) {
+    height: 1000px;
+  }
 }
 .center {
   position: absolute;
@@ -114,6 +124,9 @@
   .detail {
     position: absolute;
     right: 10px;
+    @include mq(tablet) {
+      bottom: 0;
+    }
   }
 }
 .program {
@@ -138,12 +151,19 @@
   background-color: #f0ead2;
   margin: 20px 20px 0 20px;
   box-shadow: 0 1px 8px #08080859;
+  @include mq(tablet) {
+    grid-template-columns: 1fr;
+  }
 }
 .trainer-txt {
   background: #f0ead2;
   padding: 20px;
   margin-top: 20px;
   margin-right: 20px;
+  @include mq(tablet) {
+    margin-top: 0;
+    margin-right: 0;
+  }
 }
 .trainer-ttl {
   font-size: 110%;
@@ -253,6 +273,9 @@
   max-width: 800px;
   margin: 0 auto;
   width: 90%;
+  @include mq(tablet) {
+    grid-template-columns: 1fr;
+  }
 }
 .trial-price {
   justify-self: center;
@@ -266,6 +289,9 @@
   text-shadow: -2px -2px 2px #a3b589, 2px -2px 2px #a2b589, -2px 2px 2px #a2b589,
     2px 1px 2px #a2b589;
   color: papayawhip;
+  @include mq(tablet) {
+    padding: 10px;
+  }
   span {
     font-size: 70%;
   }
@@ -291,6 +317,10 @@
   position: relative;
   padding: 1.5rem 2rem 1rem 160px;
   border-bottom: 3px solid #53a022;
+  @include mq(tablet) {
+    font-size: 130%;
+    padding: 1.5rem 2rem 1rem 100px;
+  }
   span {
     font-family: 'Roboto', sans-serif;
     font-size: 100px;
@@ -338,6 +368,9 @@
     opacity: 0.7;
     padding: 10px;
     border-radius: 15px;
+    @include mq(sp) {
+      width: 80px;
+    }
   }
 }
 
@@ -418,13 +451,18 @@ div[class^='times']:after {
 }
 .board-text {
   position: absolute;
-  top: 15px;
-  left: 18%;
-  height: 300px;
+  top: 43%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 300px;
+
   color: #fff;
   font-family: uddigikyokasho-pro, sans-serif;
   font-weight: 400;
   font-style: normal;
+  @include mq(tablet) {
+    font-size: 95%;
+  }
 }
 .minutes {
   display: flex;
@@ -440,9 +478,13 @@ div[class^='times']:after {
 
 .menu-grid {
   display: grid;
-  grid-template-columns: repeat(2, 100px 1fr);
-  grid-template-rows: 100px;
+  grid-template-columns: repeat(2, 130px 1fr);
+  grid-template-rows: 130px;
   gap: 30px;
+  @include mq(tablet) {
+    grid-template-columns: 100px 1fr;
+    grid-template-rows: 100px;
+  }
 }
 
 .price-grid {
@@ -451,6 +493,9 @@ div[class^='times']:after {
   gap: 20px;
   padding: 30px 0;
   font-size: 110%;
+  @include mq(tablet) {
+    grid-template-columns: 1fr;
+  }
 }
 .price-display {
   grid-column: span 3;
@@ -495,6 +540,10 @@ div[class^='times']:after {
   margin-bottom: 30px;
   position: relative;
   filter: grayscale(0.6);
+  margin-top: 30px;
+  @include mq(tablet){
+    margin-top: 80px;
+  }
   .bg-program-txt {
     position: absolute;
     top: 50%;
@@ -599,15 +648,49 @@ div[class^='times']:after {
   border: solid 5px #e2d1b5bd; /*背景色と同じ色に！*/
   z-index: 2;
 }
+.header-flex {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  @include mq(tablet) {
+    flex-direction: column;
+  }
+}
 .nav-grid {
   display: grid;
-  grid-template-columns: 2fr 1fr 1fr 1fr 1fr;
+  grid-template:
+    'nav1 nav2 nav3 nav4 nav5'/
+    2fr 1fr 1fr 1fr 1fr;
   text-align: center;
   align-items: center;
   a:not(.nav-contact) {
     color: $accent-color;
     font-weight: bold;
   }
+  @include mq(tablet) {
+    margin-top: 10px;
+    grid-template:
+      'nav1 nav2 nav5'
+      'nav3 nav4 nav5'
+      /1.6fr 0.6fr 0.8fr;
+    gap: 7px;
+    font-size: 90%;
+  }
+}
+.nav1 {
+  grid-area: nav1;
+}
+.nav2 {
+  grid-area: nav2;
+}
+.nav3 {
+  grid-area: nav3;
+}
+.nav4 {
+  grid-area: nav4;
+}
+.nav5 {
+  grid-area: nav5;
 }
 .nav-contact {
   background-color: green;
@@ -616,6 +699,9 @@ div[class^='times']:after {
   border-radius: 30px;
   font-weight: bold;
   box-shadow: 0 2px 3px #a1be95;
+  @include mq(tablet) {
+    padding: 5px 13px;
+  }
 }
 .copyright {
   text-align: center;
@@ -630,10 +716,21 @@ div[class^='times']:after {
   gap: 30px;
   padding: 10px 0;
   align-items: center;
+  @include mq(tablet) {
+    grid-template-columns: 1fr 1fr;
+  }
+
   a {
     color: $accent-color;
+    @include mq(tablet) {
+      grid-column: 1 / span 2;
+    }
+    img {
+      padding: 20px 20px 0 20px;
+    }
   }
 }
+
 .bg-footer {
   background-color: #ddf0dd;
 }
@@ -694,16 +791,54 @@ div[class^='times']:after {
   font-size: 150%;
   padding-left: 20px;
 }
-.first-view {
-  filter: drop-shadow(3px 3px 6px gray);
-
-  source{
-    max-width: 1300px;
-    width: 100%;
-  }
-}”
 .first-view-wrapper {
   background-color: silver;
   padding: 80px 0 30px;
   text-align: center;
+  @include mq(tablet) {
+    padding-top: 27vh;
+  }
+
+  .first-view {
+    filter: drop-shadow(3px 3px 6px gray);
+    source,
+    img {
+      max-width: 1300px;
+      width: 100%;
+    }
+  }
+}
+.site-logo {
+  text-align: center;
+  padding: 5px;
+  @include mq(tablet) {
+    border-bottom: 1px solid #53a022;
+  }
+}
+.body-make {
+  @include mq(tablet) {
+    padding-bottom: 30px;
+    bottom: 0;
+  }
+}
+
+.trainer-wrapper {
+  padding-top: 800px;
+  @include mq(tablet) {
+    padding-top: 1150px;
+  }
+}
+
+iframe {
+  height: 450px;
+  @include mq(tablet) {
+    height: 380px;
+  }
+}
+
+.mb-20 {
+  margin-bottom: 12px;
+  @include mq(tablet) {
+    margin-bottom: 8px;
+  }
 }
