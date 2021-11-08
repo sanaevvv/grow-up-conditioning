@@ -1014,7 +1014,7 @@ div[class^='times']:after {
 @media screen and (max-width: 768px) {
   .nav-grid {
     margin-top: 10px;
-    grid-template: 'nav1 nav2 nav5' 'nav3 nav4 nav5' /1.6fr 0.6fr 0.8fr;
+    grid-template: 'nav1 nav2 nav5' 'nav3 nav4 nav5' /1.6fr 0.7fr 0.8fr;
     gap: 7px;
     font-size: 90%;
   }
@@ -1040,6 +1040,12 @@ div[class^='times']:after {
   grid-area: nav5;
 }
 
+@media screen and (max-width: 768px) {
+  .header-nav {
+    border-top: 1px solid #53a022;
+  }
+}
+
 .nav-contact {
   background-color: green;
   color: #c0da95;
@@ -1048,6 +1054,7 @@ div[class^='times']:after {
   font-weight: bold;
   -webkit-box-shadow: 0 2px 3px #a1be95;
           box-shadow: 0 2px 3px #a1be95;
+  word-break: keep-all;
 }
 
 @media screen and (max-width: 768px) {
@@ -1194,12 +1201,6 @@ div[class^='times']:after {
 .site-logo {
   text-align: center;
   padding: 5px;
-}
-
-@media screen and (max-width: 768px) {
-  .site-logo {
-    border-bottom: 1px solid #53a022;
-  }
 }
 
 @media screen and (max-width: 768px) {
